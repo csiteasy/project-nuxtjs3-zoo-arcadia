@@ -7,7 +7,7 @@
         <h3 class="text-lg font-semibold mb-4">Informations</h3>
         <ul>
 
-          <li><a href="#" class="hover:text-green-300">Contact</a></li>
+          <li> <NuxtLink to="/contact" class="hover:text-green-300">Contact</NuxtLink></li>
           <li><a href="#" class="hover:text-green-300">À propos</a></li>
         </ul>
       </div>

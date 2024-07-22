@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   components: true,
 
   // Déploiement statique
-  ssr: false,
+  ssr: true,
 
   build: {},
 
@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      baseUrl: 'https://zoo-arcadia.csiteasy.com/api/',
+      baseUrl: process.env.BASE_URL_API,
       recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY
     },
     recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY,

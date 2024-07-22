@@ -3,7 +3,7 @@
     <li><NuxtLink to="/" class="hover:underline">Accueil</NuxtLink></li>
     <li><NuxtLink to="/animaux" class="hover:underline">Animaux</NuxtLink></li>
     <li><NuxtLink to="/habitats" class="hover:underline">Habitats</NuxtLink></li>
-    <li><NuxtLink to="/contact" class="hover:underline">Services</NuxtLink></li>
+<!--    <li><NuxtLink to="/contact" class="hover:underline">Services</NuxtLink></li>-->
   </ul>
 </template>
 

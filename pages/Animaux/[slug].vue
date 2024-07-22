@@ -1,11 +1,9 @@
 <template>
-
-
   <div v-if="animal">
     <ElementsPageTitle :title="(animal.name) +' - ' + (animal.race.name)"/>
     <div v-if="animal.images.length > 0" class="mx-auto px-0 ">
       <nuxt-img
-          :src="animal.images.length > 0 ? `${baseUrl}/${animal.images[0].fullUrl}` : '/default-image.jpg'"
+          :src="`${baseUrl}/${animal.images[0].fullUrl}`"
           :alt="animal.name"
           class="w-full object-cover mb-8"
           sizes="100vw sm:50vw md:400px"
@@ -34,8 +32,10 @@
           </tbody>
         </table>
       </div>
-      <ElementsSectionTitle :title="'Comment se porte ' + (animal.name) "/>
-      <div class="overflow-x-auto mb-8">
+
+      <div v-if="animal.lastMedicalReport">
+        <ElementsSectionTitle :title="'Comment se porte ' + (animal.name) "/>
+      <div class="overflow-x-auto mb-8" >
         <table class="min-w-full bg-white border border-gray-200">
           <thead>
           <tr>
@@ -54,6 +54,7 @@
           </tr>
           </tbody>
         </table>
+      </div>
       </div>
       <div v-if="animal.images.length > 1">
         <ElementsSectionTitle :title="(animal.name) + ' dans son environnement'"/>

@@ -20,10 +20,10 @@
           "Bienvenue au Zoo Arcadia - Un Paradis Écologique en Bretagne"
         </p>
         <div class="flex justify-center lg:justify-start space-x-4">
-          <nuxt-link to="/planifiez-votre-visite" class="bg-secondary-500 hover:bg-secondary-700 text-white font-bold py-2 px-4 rounded">
+          <nuxt-link to="/contact" class="bg-secondary-500 hover:bg-secondary-700 text-white font-bold py-2 px-4 rounded">
             Planifiez Votre Visite
           </nuxt-link>
-          <nuxt-link to="/decouvrez-nos-animaux" class="bg-white hover:bg-gray-100 text-primary-900 font-bold py-2 px-4 rounded">
+          <nuxt-link to="/animaux" class="bg-white hover:bg-gray-100 text-primary-900 font-bold py-2 px-4 rounded">
             Découvrez Nos Animaux
           </nuxt-link>
         </div>

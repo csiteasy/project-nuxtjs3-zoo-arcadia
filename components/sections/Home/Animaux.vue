@@ -8,18 +8,18 @@
           :key="animal.id"
           class="hasapp-card group"
       >
-       <nuxt-img
-            :src="animal.images.length > 0 ? `${baseUrl}/${animal.images[0].fullUrl}` : '/assets/images/image-transparent.png'"
+       <nuxt-img v-if="animal.images.length > 0"
+            :src="`${baseUrl}/${animal.images[0].fullUrl}`"
             :alt="animal.name"
             class="hasapp-card-img"
             sizes="100vw sm:50vw md:400px"
-
             fit="cover"
         />
+       <img v-else src="/assets/images/image-transparent.png"   class="hasapp-card-img">
         <div class="hasapp-img-card-img-container">
           <h3 class="hasapp-card-title">
             <span >{{ animal.name }}</span>
-            <span class="text-gray-300">{{ animal.race.name }}</span>
+            <div class="text-gray-300">{{ animal.race.name }}</div>
           </h3>
           <nuxt-link :to="`/animaux/${animal.slug}`" class="hasapp-card-link">
             Voir plus

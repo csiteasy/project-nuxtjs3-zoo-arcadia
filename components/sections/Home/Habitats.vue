@@ -9,13 +9,14 @@
           :key="habitat.id"
           class="hasapp-card group"
       >
-        <nuxt-img
-            :src="habitat.images.length > 0 ? `${baseUrl}${habitat.images[0].fullUrl}` : '/assets/images/image-transparent.png'"
+        <nuxt-img  v-if="habitat.images.length > 0"
+            :src="`${baseUrl}${habitat.images[0].fullUrl}`"
             :alt="habitat.name"
             class="hasapp-card-img"
             sizes="100vw sm:50vw md:400px"
             fit="cover"
         />
+        <img v-else src="/assets/images/image-transparent.png"   class="hasapp-card-img">
         <div class="hasapp-img-card-img-container">
           <h3 class="hasapp-card-title">{{ habitat.name }}</h3>
           <nuxt-link :to="`/habitats/${habitat.slug}`" class="hasapp-card-link">

@@ -2,14 +2,14 @@
   <div class="container mx-auto py-16 px-4 md:px-8 xl:px-0">
 
     <div  v-if="habitat">
-    <nuxt-img
-          :src="habitat.images.length > 0 ? `${baseUrl}/${habitat.images[0].fullUrl}` : '/default-image.jpg'"
+    <nuxt-img v-if ="habitat.images.length > 0"
+          :src="`${baseUrl}/${habitat.images[0].fullUrl}`"
           :alt="habitat.name"
           class="w-full object-cover rounded-md shadow-md mb-8"
           sizes="100vw sm:50vw md:400px"
       />
    <ElementsPageTitle :title="habitat.name" />
-      <p class="text-gray-700 mb-4 mt-8">{{ habitat.description }}</p>
+      <p class=" bg-white rounded-lg shadow-lg p-2 text-gray-700 mb-4 mt-8">{{ habitat.description }}</p>
 
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-8">
